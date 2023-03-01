@@ -11,7 +11,7 @@ export class RickymortyService {
 
   getPersonaje(personaje: any): Observable<any> {
     console.log(personaje)
-    const URL = 'https://rickandmortyapi.com/api/character?name='+personaje.personaje.name+''
+    const URL = `https://rickandmortyapi.com/api/character?name=${personaje.nombre}`
     console.log(URL)
     return this.httpClient.get(URL);
   }

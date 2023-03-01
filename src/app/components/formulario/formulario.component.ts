@@ -19,8 +19,9 @@ export class FormularioComponent implements OnInit {
   buscarPersonaje(){
     console.log(this.miFormulario.value);
     const PERSONAJE = {
-      personaje : this.miFormulario.value
+      nombre : this.miFormulario.value.personaje
     }
+    console.log(PERSONAJE)
     this.personajeSeleccionado.emit(PERSONAJE);
   }
 
