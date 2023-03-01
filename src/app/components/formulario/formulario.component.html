@@ -1,0 +1,7 @@
+<div class="jumbotron">
+    <h2 class="heading">BUSCAR PERSONAJES</h2>
+    <form [formGroup]="miFormulario" (ngSubmit)="buscarPersonaje()">
+        <input type="text" class="form-control" formControlName="personaje" placeholder="Ingresa un personaje" id="personaje">
+        <button type="submit" class="btn btn-warning mt-3">BUSCAR</button>
+    </form>
+</div>
