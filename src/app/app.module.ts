@@ -10,6 +10,7 @@ import { HomeComponent } from './components/home/home.component';
 import { FormularioComponent } from './components/formulario/formulario.component';
 import { TarjetaComponent } from './components/tarjeta/tarjeta.component';
 import { SpinnerComponent } from './components/spinner/spinner.component';
+import { CapitulosComponent } from './components/capitulos/capitulos.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { SpinnerComponent } from './components/spinner/spinner.component';
     HomeComponent,
     FormularioComponent,
     TarjetaComponent,
-    SpinnerComponent
+    SpinnerComponent,
+    CapitulosComponent
   ],
   imports: [
     BrowserModule,

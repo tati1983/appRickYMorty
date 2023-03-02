@@ -10,13 +10,17 @@ export class HomeComponent implements OnInit {
 
   constructor(private _api: RickymortyService) { }
 
+  datosPersonaje: any[] = [];
+
   ngOnInit(): void {
   }
 
   buscarPersonaje(personaje:any){
     console.log(personaje);
     this._api.getPersonaje(personaje).subscribe(personaje => {
+      console.log("a ver q hay")
       console.log(personaje);
+      this.datosPersonaje = personaje.results;
     })
   }
 
