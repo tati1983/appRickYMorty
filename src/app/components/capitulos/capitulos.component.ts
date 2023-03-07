@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, SecurityContext } from '@angular/core';
+import { CapitulosService } from 'src/app/services/capitulos.service';
 
 @Component({
   selector: 'app-capitulos',
@@ -7,11 +8,14 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class CapitulosComponent implements OnInit {
 
-  @Input() datosPersonaje: any;
+datosCapitulos: any;
 
-  constructor() { }
+
+  constructor(public _capitulos: CapitulosService) { }
 
   ngOnInit(): void {
+    // this.datosPersonaje = this._capitulos.datosCapitulos;
+    this.datosCapitulos = this._capitulos.getCapitulos();
   }
 
 }

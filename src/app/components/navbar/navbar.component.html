@@ -1,5 +1,6 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark rounded m-3">
+<nav class="navbar navbar-expand-lg navbar-light bg-light rounded m-3">
     <div class="container-fluid">
-      <span>AppRick&Morty</span>
+      <span style="color: white;">AppRick&Morty</span>
+      <button routerLink="" class="btn btn-primary" *ngIf="this.router.url === '/tarjeta' || this.router.url === '/capitulos'">Home</button>
     </div>
   </nav>

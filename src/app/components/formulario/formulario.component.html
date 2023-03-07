@@ -1,7 +1,15 @@
 <div class="jumbotron m-3">
-    <h2 class="heading">BUSCAR PERSONAJES</h2>
+    <div class="container barra">
+        <img class="img-fluid" style="width:15%" src="../../../assets/png-clipart-rick-sanchez-morty-smith-rick-and-morty-season-2-product-design-television-others-television-internet.png" class="img-fluid" alt="">
+        <img src="../../../assets/58f37720a4fa116215a9240f.png" class="img-fluid" alt="">
+    </div>
     <form [formGroup]="miFormulario" (ngSubmit)="buscarPersonaje()">
-        <input type="text" class="form-control" formControlName="personaje" placeholder="Ingresa un personaje" id="personaje">
-        <button type="submit" class="btn btn-warning mt-3">BUSCAR</button>
+        <input type="text" class="form-control cursor-center" formControlName="personaje" placeholder="Ingresa un personaje" id="personaje">
+        <div class="text-center">
+            <button type="submit" class="btn btn btn-info mt-3 mb-2">BUSCAR</button>
+        </div>
     </form>
+    <div class="container jumbotron mt-2" class="text-center" *ngIf="mostrar">
+        <h2 class="fs-1 text-center fw-bold mt-1" style="color: #000000">BUSCAR PERSONAJES</h2>
+    </div>
 </div>

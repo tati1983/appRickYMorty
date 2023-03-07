@@ -1,2 +1,2 @@
 <app-formulario (personajeSeleccionado)="buscarPersonaje($event)"></app-formulario>
-<app-tarjeta [datosPersonaje]="datosPersonaje"></app-tarjeta>
+<app-tarjeta [datosPersonaje]="datosPersonaje" *ngIf="datosPersonaje.length > 0"></app-tarjeta>

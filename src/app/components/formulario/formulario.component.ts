@@ -1,5 +1,6 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-formulario',
@@ -12,16 +13,17 @@ export class FormularioComponent implements OnInit {
 
   constructor() { }
 
+  mostrar: boolean = true;
+
   miFormulario = new FormGroup({
     personaje : new FormControl('', [])
   });
 
   buscarPersonaje(){
-    console.log(this.miFormulario.value);
+    this.mostrar = false;
     const PERSONAJE = {
       nombre : this.miFormulario.value.personaje
     }
-    console.log(PERSONAJE)
     this.personajeSeleccionado.emit(PERSONAJE);
   }
 

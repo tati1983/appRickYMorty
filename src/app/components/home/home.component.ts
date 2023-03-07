@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { RickymortyService } from 'src/app/services/rickymorty.service';
 
 @Component({
@@ -16,9 +16,7 @@ export class HomeComponent implements OnInit {
   }
 
   buscarPersonaje(personaje:any){
-    console.log(personaje);
     this._api.getPersonaje(personaje).subscribe(personaje => {
-      console.log("a ver q hay")
       console.log(personaje);
       this.datosPersonaje = personaje.results;
     })

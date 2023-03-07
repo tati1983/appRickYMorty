@@ -1,4 +1,4 @@
-<div class="row row-cols-1 row-cols-md-2 g-4 m-2">
+<div class="row row-cols-1 row-cols-md-2 g-4 m-2 font">
   <div class="col" *ngFor="let personaje of datosPersonaje">
     <div class="card">
       <img src={{personaje.image}} class="card-img-top img-fluid" alt="...">
@@ -12,6 +12,6 @@
         <li class="list-group-item">Status: {{personaje.status}}</li>
       </ul>
     </div>
-    <a href="" target="_blank" class="btn btn-primary btn-block mt-3">+ Info</a>
+    <button class="btn btn btn-info btn-block mt-3" (click)="buscarCapitulos(personaje)">Capitulos</button>
   </div>
 </div>
